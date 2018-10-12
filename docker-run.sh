@@ -117,7 +117,7 @@ dock_f_start () {
 
 if [ $# -eq 0 ]
 then
-    echo "$(basename "$0"): No arguments were given;"
+    echo "$(basename "$0"): No arguments were given."
 
     dock_f_help    
     

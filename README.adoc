@@ -12,14 +12,14 @@ Ask support to OPS team if needed.
 
 After, you can use these scripts by adding the script `docker.sh` on your repository, in the same directory as your Dockerfile.
 
-Use this command to get the script:
+Use these commands to get the script:
 
 ----
 curl -O https://raw.githubusercontent.com/yseop/docker-helper/master/docker.sh
-chmod 775 docker.sh
+chmod u+x docker.sh
 ----
 
-Do not execute this script `docker.sh` before reading the content.
+Do not execute the script `docker.sh` before reading the content.
 
 Please refer to the <<#docker-usage,**docker.sh** description>> to have details about this script.
 
