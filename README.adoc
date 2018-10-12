@@ -1,0 +1,63 @@
+= Docker Helper
+
+Repository with Docker tools which can be used in each project to manage Docker Images.
+
+== How to use
+
+First, you need a Dockerfile on your repository.
+See https://docs.docker.com/engine/reference/builder/[Dockerfile documentation] to create one.
+Ask support to OPS team if needed.
+
+After, you can use these scripts by adding the script `docker.sh` on your repository, in the same directory as your Dockerfile.
+
+Please refer to the <<#docker-usage,**docker.sh** description>> to have details about this script.
+
+== Scripts
+
+=== docker.sh
+
+==== Usage
+
+[[docker-usage]]
+
+This script downloads `docker-run.sh` from this repository and execute it with arguments that you passed.
+See <<#dockerrun-arguments,**docker-run.sh** arguments>>.
+
+=== docker-run.sh
+
+==== Usage
+
+This script permites to manage docker images of your project.
+It is downloaded by `docker.sh`.
+
+It will check if you have a `docker_option.sh` script on your repository and if it is up to date.
+If not, it will download the template file and tell how to modify it.
+
+==== Arguments
+
+[[dockerrun-arguments]]
+
+[horizontal]
+**build**::  Build docker image
+**clean**:: Clean docker image
+**deps**:: Pull latest version of FROM dockerfile
+**help**:: See possible arguments
+**history**:: Print docker layers
+**push**:: Push docker image to registry (require rights)
+**run**:: Run docker image
+**start**:: Following of deps, build and run commands
+
+=== docker_option.sh.template
+
+==== Usage
+
+Use this template to define your Docker image parameters.
+This file works with `docker.sh` so you have to commit it.
+
+Rename this file by `docker_option.sh` on your repository and modify variable values.
+
+[horizontal]
+**PROJECT**:: Your project name. It will be the name of the Docker image.
+**TAG**:: The Docker image's tag. For example the version.
+**PORT**:: The port you need to expose for your application.
+**DOCKER_CUSTOM**:: Your custom parameters for the application like environment variables and volumes.
