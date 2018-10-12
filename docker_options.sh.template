@@ -1,0 +1,25 @@
+# options for docker.sh
+
+## version to check compatibility
+DOCKER_OPTIONS_VERSION="1"
+
+## VARIABLES
+## Complete image name will be ${REPOSITORY}/${PROJECT}:${TAG} - yseop/docker-helper:template
+# Repository name
+REPOSITORY='yseop'
+# Image name
+PROJECT='docker-helper'
+# Tag name
+TAG='template'
+# Exposed port
+PORT=8080
+
+# SET THIS IF YOU WANT TO CUSTOMIZE DOCKER RUN OPTIONS
+unset -v DOCKER_CUSTOM
+DOCKER_CUSTOM=(
+    ## environment variables
+    -e ENVIRONMENT_VARIABLE=template
+    ## volumes
+    -v ~/mydirectory:/mydirectory:ro
+    -v ${sourcedir}:/source:rw
+)
