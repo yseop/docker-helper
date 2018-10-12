@@ -15,7 +15,6 @@ download_f_template () {
         printf 'The file %s is already in this directory.\n' "${DOCKER_OPTIONS_TEMPLATE_FILE}"
     else
         wget -q "https://raw.githubusercontent.com/yseop/docker-helper/master/${DOCKER_OPTIONS_TEMPLATE_FILE}"
-        # wget -q "https://raw.githubusercontent.com/yseop/docker-helper/feature/dockerbash/${DOCKER_OPTIONS_TEMPLATE_FILE}"
         printf 'The file %s is downloaded in this directory.\n' "${DOCKER_OPTIONS_TEMPLATE_FILE}"
     fi
 
@@ -118,7 +117,7 @@ dock_f_start () {
 
 if [ $# -eq 0 ]
 then
-    echo "$(basename "$0"): No arguments were given; performing default operations."
+    echo "$(basename "$0"): No arguments were given."
 
     dock_f_help    
     

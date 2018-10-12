@@ -2,6 +2,8 @@
 
 Repository with Docker tools which can be used in each project to manage Docker Images.
 
+Feel free to improve scripts or add issues.
+
 == How to use
 
 First, you need a Dockerfile on your repository.
@@ -9,6 +11,15 @@ See https://docs.docker.com/engine/reference/builder/[Dockerfile documentation] 
 Ask support to OPS team if needed.
 
 After, you can use these scripts by adding the script `docker.sh` on your repository, in the same directory as your Dockerfile.
+
+Use these commands to get the script:
+
+----
+curl -O https://raw.githubusercontent.com/yseop/docker-helper/master/docker.sh
+chmod u+x docker.sh
+----
+
+Do not execute the script `docker.sh` before reading the content.
 
 Please refer to the <<#docker-usage,**docker.sh** description>> to have details about this script.
 
