@@ -57,6 +57,7 @@ If not, it will download the template file and tell how to modify it.
 **push**:: Push docker image to registry (require rights)
 **run**:: Run docker image
 **start**:: Following of deps, build and run commands
+**publish**:: Following of deps, build, push and clean commands
 
 ==== Options
 
