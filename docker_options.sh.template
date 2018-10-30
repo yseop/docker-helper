@@ -10,7 +10,7 @@ REPOSITORY='yseop'
 # Image name
 PROJECT='docker-helper'
 # Tag name
-TAG='template'
+TAG=${DOCKER_TAG:-template}
 # Exposed port
 PORT=8080
 

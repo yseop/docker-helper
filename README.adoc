@@ -58,6 +58,14 @@ If not, it will download the template file and tell how to modify it.
 **run**:: Run docker image
 **start**:: Following of deps, build and run commands
 
+==== Options
+
+===== Environment variables
+
+[[dockerrun-options]]
+[horizontal]
+**DOCKER_TAG**:: Replace default tag with specified tag
+
 === docker_option.sh.template
 
 ==== Usage
