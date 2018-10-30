@@ -70,7 +70,7 @@ dock_f_help () {
     push        Push docker image to registry (require rights).
     run         Run docker image.
     start       Run the “deps”, “build” and “run” commands.
-    publish     Run the “deps”, “build” and “push” commands.
+    publish     Run the “deps”, “build”, “push”, and “clean” commands.
 
   Exits with the status of the last command, and 2 if
   an invalid command name was given.
@@ -119,9 +119,9 @@ dock_f_start () {
 dock_f_publish () {
     dock_f_deps &&
     dock_f_build &&
-    dock_f_push
+    dock_f_push &&
+    dock_f_clean
 }
-
 
 # === Main code ===
 
