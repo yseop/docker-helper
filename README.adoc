@@ -32,11 +32,13 @@ Please refer to the <<#docker-usage,**docker.sh** description>> to have details 
 [[docker-usage]]
 
 This script downloads `docker-run.sh` from this repository and execute it with arguments that you passed.
-See <<#dockerrun-arguments,**docker-run.sh** arguments>>.
+See <<#dockerrun-usage,**docker-run.sh** usage>>.
 
 === docker-run.sh
 
 ==== Usage
+
+[[dockerrun-usage]]
 
 This script permites to manage docker images of your project.
 It is downloaded by `docker.sh`.
@@ -44,20 +46,7 @@ It is downloaded by `docker.sh`.
 It will check if you have a `docker_option.sh` script on your repository and if it is up to date.
 If not, it will download the template file and tell how to modify it.
 
-==== Arguments
-
-[[dockerrun-arguments]]
-
-[horizontal]
-**build**::  Build docker image
-**clean**:: Clean docker image
-**deps**:: Pull latest version of FROM dockerfile
-**help**:: See possible arguments
-**history**:: Print docker layers
-**push**:: Push docker image to registry (require rights)
-**run**:: Run docker image
-**start**:: Following of deps, build and run commands
-**publish**:: Following of deps, build, push and clean commands
+You can use `./docker.sh help` for usage.
 
 ==== Options
 
